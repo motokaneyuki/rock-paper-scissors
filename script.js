@@ -36,4 +36,16 @@ function getComputerChoice() {
 console.log(randomNumber);
 console.log(getComputerChoice());
 
+/* STEP 3
+When user inputs a choice of rock/paper/scissors
+return their input
+*/
 
+let attack;
+
+function getHumanChoice() {
+    attack = window.prompt('How will you attack?');
+    return attack;
+}
+
+console.log(getHumanChoice());
