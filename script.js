@@ -1,15 +1,5 @@
 console.log('Welcome to the Rock Paper Scissors Game!');
 
-function getComputerChoice() {
-    let randomNumber = Math.random() * 100;
-    if (randomNumber <= 33) {
-        return 'rock';
-    } else if (randomNumber > 66) {
-        return 'paper';
-    } else 
-        return 'scissors';
-}
-
 // SWITCH VERSION:
 // function getComputerChoice() {
 //     switch (false) {
@@ -25,15 +15,20 @@ function getComputerChoice() {
 //     }
 // }
 
-// console.log(randomNumber);
-// console.log(getComputerChoice());
+function getComputerChoice() {
+    let randomNumber = Math.random() * 100;
+    if (randomNumber <= 33) {
+        return 'rock';
+    } else if (randomNumber > 66) {
+        return 'paper';
+    } else 
+        return 'scissors';
+}
 
 function getHumanChoice() {
     let attack = prompt('How will you attack?');
     return attack.toLowerCase();
 }
-
-// console.log(getHumanChoice());
 
 let computerScore = 0;
 let humanScore = 0;
