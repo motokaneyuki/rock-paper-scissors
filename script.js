@@ -44,7 +44,7 @@ return their input
 
 function getHumanChoice() {
     let attack = prompt('How will you attack?');
-    return attack;
+    return attack.toLowerCase();
 }
 
 // console.log(getHumanChoice());
