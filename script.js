@@ -1,11 +1,4 @@
-console.log('Hello World');
-
-/* 
-STEP 2
-When a function (getComputerChoice) is called 
-Return a random number greater than or equal to 0 and less than 1
-Exchange the number to rock/paper/scissors
-*/
+console.log('Welcome to the Rock Paper Scissors Game!');
 
 let randomNumber = Math.random() * 100;
 
@@ -33,14 +26,8 @@ function getComputerChoice() {
 //     }
 // }
 
-console.log(randomNumber);
+// console.log(randomNumber);
 // console.log(getComputerChoice());
-
-/* 
-STEP 3
-When user inputs a choice of rock/paper/scissors
-return their input
-*/
 
 function getHumanChoice() {
     let attack = prompt('How will you attack?');
