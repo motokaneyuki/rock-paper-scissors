@@ -26,7 +26,7 @@ function getComputerChoice() {
 }
 
 function getHumanChoice() {
-    let attack = prompt('How will you attack?');
+    let attack = prompt('How will you attack? Rock, Paper, or Scissors?');
     return attack.toLowerCase();
 }
 
