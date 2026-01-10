@@ -42,10 +42,8 @@ When user inputs a choice of rock/paper/scissors
 return their input
 */
 
-let attack;
-
 function getHumanChoice() {
-    attack = prompt('How will you attack?');
+    let attack = prompt('How will you attack?');
     return attack;
 }
 
