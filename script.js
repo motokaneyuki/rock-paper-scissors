@@ -89,3 +89,11 @@ playGame();
 playGame();
 playGame();
 playGame();
+
+if (humanScore > computerScore) {
+    console.log('YOU WIN THE GAME. CONGRATULATIONS!');
+} else if (humanScore < computerScore) {
+    console.log('YOU LOST THE GAME. TRY AGAIN NEXT TIME!');
+} else {
+    console.log('THE GAME RESULT IS A TIE!');
+}
