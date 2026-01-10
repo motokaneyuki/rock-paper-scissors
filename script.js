@@ -34,9 +34,10 @@ function getComputerChoice() {
 // }
 
 console.log(randomNumber);
-console.log(getComputerChoice());
+// console.log(getComputerChoice());
 
-/* STEP 3
+/* 
+STEP 3
 When user inputs a choice of rock/paper/scissors
 return their input
 */
@@ -44,8 +45,26 @@ return their input
 let attack;
 
 function getHumanChoice() {
-    attack = window.prompt('How will you attack?');
+    attack = prompt('How will you attack?');
     return attack;
 }
 
-console.log(getHumanChoice());
+// console.log(getHumanChoice());
+
+let computerScore = 0;
+let humanScore = 0;
+
+function playRound (humanChoice, computerChoice) {
+    if (humanChoice === 'rock' && computerChoice === 'paper') {
+        return console.log('You lose! Paper beats Rock');
+    } else if (humanChoice === 'rock' && computerChoice === 'scissors') {
+        return console.log('You win! Rock beats scissors');
+    } else if (humanChoice === 'rock' && computerChoice === 'rock') {
+        return console.log('It\'s a tie');
+    }
+}
+
+let humanSelection = getHumanChoice();
+let computerSelection = getComputerChoice();
+
+playRound(humanSelection, computerSelection);
