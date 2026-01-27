@@ -1,0 +1,27 @@
+body {
+    background-color: #b3ca90;
+    color: #5f6053;
+}
+
+.container {
+    background-color: #fcfbe7;
+    border-radius: 10px;
+    padding: 50px;
+    margin: 100px 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.scores {
+    display: flex;
+}
+
+button {
+    background-color: #768f5e;
+    color: #fcfbe7;
+    border-color: #5f6053;
+    border-radius: 30px;
+    padding: 10px;
+}
