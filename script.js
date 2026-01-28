@@ -1,28 +1,18 @@
 console.log('Welcome to the Rock Paper Scissors Game!');
 
-// SWITCH VERSION:
-// function getComputerChoice() {
-//     switch (false) {
-//     case randomNumber <= 33:
-//         return 'rock';
-//         break;
-//     case randomNumber > 66:
-//         return 'paper';
-//         break;
-//     default:
-//         return 'scissors';
-//         break;
-//     }
-// }
-
 function getComputerChoice() {
-    let randomNumber = Math.random() * 100;
-    if (randomNumber <= 33) {
-        return 'rock';
-    } else if (randomNumber > 66) {
-        return 'paper';
-    } else 
-        return 'scissors';
+    let randomNumber = Math.floor(Math.random() * 3);
+    switch (randomNumber){
+        case 0:
+            return 'rock';
+            break;
+        case 1:
+            return 'paper';
+            break;
+        case 2:
+            return 'scissors'
+            break;
+    }
 }
 
 function getHumanChoice() {
@@ -80,10 +70,10 @@ function playGame() {
 }
 
 playGame();
-playGame();
-playGame();
-playGame();
-playGame();
+// playGame();
+// playGame();
+// playGame();
+// playGame();
 
 if (humanScore > computerScore) {
     console.log('YOU WIN THE GAME. CONGRATULATIONS!');
