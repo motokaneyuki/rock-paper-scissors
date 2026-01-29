@@ -1,6 +1,12 @@
 console.log('Welcome to the Rock Paper Scissors Game!');
 
-function getComputerChoice() {
+const buttons = document.querySelector('.buttons');
+const rockButton = document.querySelector('.rock');
+const paperButton = document.querySelector('.paper');
+const scissorsButton = document.querySelector('.scissors');
+
+
+function getComputerChoice(){
     let randomNumber = Math.floor(Math.random() * 3);
     switch (randomNumber){
         case 0:
@@ -15,16 +21,16 @@ function getComputerChoice() {
     }
 }
 
-function getHumanChoice() {
-    let attack = prompt('How will you attack? Rock, Paper, or Scissors?');
-    return attack.toLowerCase();
-}
+buttons.addEventListener('click', (event) => {
+    let target = event.target;
+    let humanChoice = target.textContent.toLowerCase();
+    playGame(humanChoice);
+})
 
-let computerScore = 0;
-let humanScore = 0;
 
-function playGame() {
-        function playRound (humanChoice, computerChoice) {
+function playGame(humanChoice) {
+    function playRound (humanChoice, computerChoice) {
+        // console.log("call playRound");
         if (humanChoice === 'rock' && computerChoice === 'paper') {
             console.log('Computer chose: ' + computerChoice);
             console.log('You lose! Paper beats Rock');
@@ -61,24 +67,28 @@ function playGame() {
         } 
     }
 
-    let humanSelection = getHumanChoice();
+
     let computerSelection = getComputerChoice();
 
-    playRound(humanSelection, computerSelection);
+    playRound(humanChoice, computerSelection);
+
     console.log('Your Score: ' + humanScore);
     console.log('Computer Score: ' + computerScore);
 }
 
-playGame();
+let computerScore = 0;
+let humanScore = 0;
+
+// playGame();
 // playGame();
 // playGame();
 // playGame();
 // playGame();
 
-if (humanScore > computerScore) {
-    console.log('YOU WIN THE GAME. CONGRATULATIONS!');
-} else if (humanScore < computerScore) {
-    console.log('YOU LOST THE GAME. TRY AGAIN NEXT TIME!');
-} else {
-    console.log('THE GAME RESULT IS A TIE!');
-}
+// if (humanScore > computerScore) {
+//     console.log('YOU WIN THE GAME. CONGRATULATIONS!');
+// } else if (humanScore < computerScore) {
+//     console.log('YOU LOST THE GAME. TRY AGAIN NEXT TIME!');
+// } else {
+//     console.log('THE GAME RESULT IS A TIE!');
+// }
