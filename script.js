@@ -12,6 +12,8 @@ const results = document.querySelector('.results');
 const playAgainButton = document.querySelector('.playAgainButton');
 const musicButton = document.querySelector('.musicButton');
 const audio = new Audio('audio/game-8-bit-399898.mp3');
+const happyMeow = new Audio('audio/catHappyMeow.mp3');
+const sadMeow = new Audio('audio/catSadMeowTwo.mp3');
 const catImage = document.querySelector('.catImage');
 
 musicButton.addEventListener('click', () => {
@@ -57,10 +59,12 @@ function playGame(humanChoice) {
             battle.textContent = 'Cat did ' + computerChoice + '...\nYou lose! Paper beats Rock';
             computerScore++;
             catImage.src = 'img/catHappy.png';
+            happyMeow.play();
         } else if (humanChoice === 'rock' && computerChoice === 'scissors') {
             battle.textContent = 'Cat did ' + computerChoice + '...\nYou win! Rock beats scissors';
             humanScore++;
             catImage.src = 'img/catSad.png';
+            sadMeow.play();
         } else if (humanChoice === 'rock' && computerChoice === 'rock') {
             battle.textContent = 'Cat did ' + computerChoice + '...\nIt\'s a tie';
             catImage.src = 'img/catBattle.png';
@@ -71,14 +75,17 @@ function playGame(humanChoice) {
             battle.textContent = 'Cat did ' + computerChoice + '...\nYou lose! Scissors beat Paper';
             computerScore++;
             catImage.src = 'img/catHappy.png';
+            happyMeow.play();
         } else if (humanChoice === 'paper' && computerChoice === 'rock') {
             battle.textContent = 'Cat did ' + computerChoice + '...\nYou win! Paper beats rock';
             humanScore++;
             catImage.src = 'img/catSad.png';
+            sadMeow.play();
         } else if (humanChoice === 'scissors' && computerChoice === 'paper') {
             battle.textContent = 'Cat did ' + computerChoice + '...\nYou win! Scissors beat Paper';
             humanScore++;
             catImage.src = 'img/catSad.png';
+            sadMeow.play();
         } else if (humanChoice === 'scissors' && computerChoice === 'scissors') {
             battle.textContent = 'Cat did ' + computerChoice + '...\nIt\'s a tie';
             catImage.src = 'img/catBattle.png';
@@ -86,6 +93,7 @@ function playGame(humanChoice) {
             battle.textContent = 'Cat did ' + computerChoice + '...\nYou lose! Rock beats Scissors';
             computerScore++;
             catImage.src = 'img/catHappy.png';
+            happyMeow.play();
         } 
     }
 
