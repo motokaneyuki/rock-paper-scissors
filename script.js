@@ -5,6 +5,8 @@ const rockButton = document.querySelector('.rock');
 const paperButton = document.querySelector('.paper');
 const scissorsButton = document.querySelector('.scissors');
 const battle = document.querySelector('.battle');
+const userScoreResult = document.querySelector('.userScoreResult');
+const computerScoreResult = document.querySelector('.computerScoreResult');
 
 
 function getComputerChoice(){
@@ -28,6 +30,8 @@ buttons.addEventListener('click', (event) => {
     playGame(humanChoice);
 })
 
+let computerScore = 0;
+let humanScore = 0;
 
 function playGame(humanChoice) {
     function playRound (humanChoice, computerChoice) {
@@ -64,12 +68,9 @@ function playGame(humanChoice) {
 
     playRound(humanChoice, computerSelection);
 
-    console.log('Your Score: ' + humanScore);
-    console.log('Computer Score: ' + computerScore);
+    userScoreResult.textContent = 'You: ' + humanScore;
+    computerScoreResult.textContent = 'Cat: ' + computerScore;
 }
-
-let computerScore = 0;
-let humanScore = 0;
 
 // playGame();
 // playGame();
