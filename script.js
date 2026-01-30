@@ -7,6 +7,9 @@ const scissorsButton = document.querySelector('.scissors');
 const battle = document.querySelector('.battle');
 const userScoreResult = document.querySelector('.userScoreResult');
 const computerScoreResult = document.querySelector('.computerScoreResult');
+const popup = document.querySelector('.popup');
+const results = document.querySelector('.results');
+const playAgainButton = document.querySelector('.playAgainButton');
 
 
 function getComputerChoice(){
@@ -25,6 +28,7 @@ function getComputerChoice(){
 }
 
 buttons.addEventListener('click', (event) => {
+    if (!popup.classList.contains('hidden')) return;
     let target = event.target;
     let humanChoice = target.textContent.toLowerCase();
     playGame(humanChoice);
@@ -65,23 +69,25 @@ function playGame(humanChoice) {
 
 
     let computerSelection = getComputerChoice();
-
     playRound(humanChoice, computerSelection);
 
     userScoreResult.textContent = 'You: ' + humanScore;
     computerScoreResult.textContent = 'Cat: ' + computerScore;
+
+    if (humanScore == 5) {
+        results.textContent = 'You WIN!';
+        popup.classList.toggle('hidden');
+    } else if (computerScore == 5) {
+        results.textContent = 'You LOST!';
+        popup.classList.toggle('hidden');
+    }
 }
 
-// playGame();
-// playGame();
-// playGame();
-// playGame();
-// playGame();
-
-// if (humanScore > computerScore) {
-//     console.log('YOU WIN THE GAME. CONGRATULATIONS!');
-// } else if (humanScore < computerScore) {
-//     console.log('YOU LOST THE GAME. TRY AGAIN NEXT TIME!');
-// } else {
-//     console.log('THE GAME RESULT IS A TIE!');
-// }
+playAgainButton.addEventListener('click', () => {
+    popup.classList.toggle('hidden');
+    humanScore = 0;
+    computerScore = 0;
+    userScoreResult.textContent = 'You: ';
+    computerScoreResult.textContent = 'Cat: ';
+    battle.textContent = 'Choose your attack!';
+})

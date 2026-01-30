@@ -15,7 +15,7 @@
     font-family: 'gameFont', Arial, sans-serif;
 }
 
-body {
+.body {
     background-color: #b3ca90;
     color: #5f6053;
     margin:0;
@@ -74,6 +74,38 @@ img {
 .battle {
     font-size: 11px;
     color: #768f5e;
+}
+
+.popup {
+    background-color: #b3ca90;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 5px 5px 5px grey;
+    border: solid 1px #5f5f5f;
+    border-radius: 5px;
+}
+
+.hidden {
+    display: none;
+}
+
+.popup img {
+    width: 150px;
+    height: auto;
+}
+
+.popupItems {
+    display: flex;
+    padding: 20px;
+}
+
+.popupRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
 
 /* test to see border */

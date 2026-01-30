@@ -7,19 +7,30 @@
     <title>Rock Paper Scissors</title>
 </head>
 <body>
-    <div class="container">
-        <h1>Rock Paper or Scissors?</h1>
-        <img src="img/catBattle.png">
-        <div class = "scores">       
-            <p class="userScoreResult">You: </p>
-            <p class="computerScoreResult">Cat: </p>
+    <div class="body">
+        <div class="container">
+            <h1>Rock Paper or Scissors?</h1>
+            <img src="img/catBattle.png">
+            <div class = "scores">       
+                <p class="userScoreResult">You: </p>
+                <p class="computerScoreResult">Cat: </p>
+            </div>
+            <div class = "buttons">
+                <button class="rock">ROCK</button>
+                <button class="paper">PAPER</button>
+                <button class="scissors">SCISSORS</button>
+            </div>
+            <p class = "battle">Choose your attack!</p>
         </div>
-        <div class = "buttons">
-            <button class="rock">ROCK</button>
-            <button class="paper">PAPER</button>
-            <button class="scissors">SCISSORS</button>
+    </div>
+    <div class="popup hidden">
+        <div class="popupItems">
+            <img src="img/catCross.PNG">
+            <div class="popupRight">
+                <h3 class="results">YOU ___!</h3>
+                <button class="playAgainButton">PLAY AGAIN</button>
+            </div>
         </div>
-        <p class = "battle">Choose your attack!</p>
     </div>
 
     <script src="script.js"></script>
