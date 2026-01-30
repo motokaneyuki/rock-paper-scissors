@@ -10,7 +10,19 @@ const computerScoreResult = document.querySelector('.computerScoreResult');
 const popup = document.querySelector('.popup');
 const results = document.querySelector('.results');
 const playAgainButton = document.querySelector('.playAgainButton');
+const musicButton = document.querySelector('.musicButton');
+const audio = new Audio('audio/game-8-bit-399898.mp3');
 
+musicButton.addEventListener('click', () => {
+    if (audio.paused) {
+        audio.currentTime = 0;
+        audio.loop = true;
+        audio.volume = 0.5;
+        audio.play();
+    } else {
+        audio.pause();
+    }
+})
 
 function getComputerChoice(){
     let randomNumber = Math.floor(Math.random() * 3);
