@@ -33,37 +33,28 @@ function playGame(humanChoice) {
     function playRound (humanChoice, computerChoice) {
         // console.log("call playRound");
         if (humanChoice === 'rock' && computerChoice === 'paper') {
-            battle.textContent = 'Cat did ' + computerChoice + '...';
-            console.log('You lose! Paper beats Rock');
+            battle.textContent = 'Cat did ' + computerChoice + '...\nYou lose! Paper beats Rock';
             computerScore++;
         } else if (humanChoice === 'rock' && computerChoice === 'scissors') {
-            battle.textContent = 'Cat did ' + computerChoice + '...';
-            console.log('You win! Rock beats scissors');
+            battle.textContent = 'Cat did ' + computerChoice + '...\nYou win! Rock beats scissors';
             humanScore++;
         } else if (humanChoice === 'rock' && computerChoice === 'rock') {
-            battle.textContent = 'Cat did ' + computerChoice + '...';
-            console.log('It\'s a tie');
+            battle.textContent = 'Cat did ' + computerChoice + '...\nIt\'s a tie';
         } else if (humanChoice === 'paper' && computerChoice === 'paper') {
-            battle.textContent = 'Cat did ' + computerChoice + '...';
-            console.log('It\'s a tie');
+            battle.textContent = 'Cat did ' + computerChoice + '...\nIt\'s a tie';
         } else if (humanChoice === 'paper' && computerChoice === 'scissors') {
-            battle.textContent = 'Cat did ' + computerChoice + '...';
-            console.log('You lose! Scissors beat Paper');
+            battle.textContent = 'Cat did ' + computerChoice + '...\nYou lose! Scissors beat Paper';
             computerScore++;
         } else if (humanChoice === 'paper' && computerChoice === 'rock') {
-            battle.textContent = 'Cat did ' + computerChoice + '...';
-            console.log('You win! Paper beats rock');
+            battle.textContent = 'Cat did ' + computerChoice + '...\nYou win! Paper beats rock';
             humanScore++;
         } else if (humanChoice === 'scissors' && computerChoice === 'paper') {
-            battle.textContent = 'Cat did ' + computerChoice + '...';
-            console.log('You win! Scissors beat Paper');
+            battle.textContent = 'Cat did ' + computerChoice + '...\nYou win! Scissors beat Paper';
             humanScore++;
         } else if (humanChoice === 'scissors' && computerChoice === 'scissors') {
-            battle.textContent = 'Cat did ' + computerChoice + '...';
-            console.log('It\'s a tie');
+            battle.textContent = 'Cat did ' + computerChoice + '...\nIt\'s a tie';
         } else if (humanChoice === 'scissors' && computerChoice === 'rock') {
-            battle.textContent = 'Cat did ' + computerChoice + '...';
-            console.log('You lose! Rock beats Scissors');
+            battle.textContent = 'Cat did ' + computerChoice + '...\nYou lose! Rock beats Scissors';
             computerScore++;
         } 
     }
