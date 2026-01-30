@@ -3,6 +3,11 @@
     src: url('fonts/PressStart2P-vaV7.ttf');
 }
 
+@font-face {
+    font-family: 'subGameFont';
+    src: url('fonts/Ithaca-LVB75.ttf');
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -65,6 +70,11 @@ button:hover {
 img {
     width: 250px;
     height: auto;
+}
+
+.battle {
+    font-size: 11px;
+    color: #768f5e;
 }
 
 /* test to see border */
