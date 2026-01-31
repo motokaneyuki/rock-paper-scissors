@@ -1,4 +1,5 @@
 # rock-paper-scissors
+Live preview can be found <a href="https://motokaneyuki.github.io/rock-paper-scissors/">here</a>.
 
 ## Overview
 This is a rock paper scissors game. I tried to make the UI cuter with a cat who is responsive to the game results and made the option to play music for a more immersive game experience.
