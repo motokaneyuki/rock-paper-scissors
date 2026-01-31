@@ -127,12 +127,25 @@ img {
 }
 
 @media only screen and (max-width: 500px) {
+    h1 {
+        font-size: large;
+    }
+
+    img {
+        width: 200px;
+        height: auto;
+    }
+
     .container {
         gap: 10px;
     }
 
     .buttons {
         flex-direction: column;
+    }
+
+    p {
+        font-size: x-small;
     }
 }
 /* test to see border */
