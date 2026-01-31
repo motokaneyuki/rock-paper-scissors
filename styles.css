@@ -126,6 +126,15 @@ img {
     align-items: center;
 }
 
+@media only screen and (max-width: 500px) {
+    .container {
+        gap: 10px;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+}
 /* test to see border */
 
 /* * { outline: 1px solid red !important; } */
