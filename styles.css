@@ -3,11 +3,6 @@
     src: url('fonts/PressStart2P-vaV7.ttf');
 }
 
-@font-face {
-    font-family: 'subGameFont';
-    src: url('fonts/Ithaca-LVB75.ttf');
-}
-
 * {
     margin: 0;
     padding: 0;
