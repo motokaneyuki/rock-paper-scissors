@@ -17,6 +17,16 @@ const sadMeow = new Audio('audio/catSadMeowTwo.mp3');
 const catImage = document.querySelector('.catImage');
 
 musicButton.addEventListener('click', () => {
+    let buttonCLicked = true;
+    document.addEventListener('visibilitychange', () => {
+        if (document.hidden) {
+            audio.pause();
+        } else if (!document.hidden && buttonCLicked == true) {
+            audio.play();
+        } else {
+            audio.pause();
+        }
+    })
     if (audio.paused) {
         audio.currentTime = 0;
         audio.loop = true;
@@ -24,6 +34,7 @@ musicButton.addEventListener('click', () => {
         audio.play();
     } else {
         audio.pause();
+        buttonCLicked = false;
     }
 })
 
@@ -54,7 +65,6 @@ let humanScore = 0;
 
 function playGame(humanChoice) {
     function playRound (humanChoice, computerChoice) {
-        // console.log("call playRound");
         if (humanChoice === 'rock' && computerChoice === 'paper') {
             battle.textContent = 'Cat did ' + computerChoice + '...\nYou lose! Paper beats Rock';
             computerScore++;
